@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    font-family: "DM Sans", sans-serif !important;
+    width: "100vw";
+    overflow-x: hidden;
+}
+.marquee {
+    width: 100%; /* Adjust width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee > .flex {
+    display: inline-block;
+    animation: marquee 20s linear infinite; /* Adjust duration (20s) as needed */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
